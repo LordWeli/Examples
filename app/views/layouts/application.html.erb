@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Examples</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <%= link_to 'Home', root_path, class: "navbar-brand col-md-2"%>
+    </nav>
+    <div class="col-md-2">
+      <aside>
+        <nav class="col-md-12 sidebar-sticky">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <%= render 'examples/links' %>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+    </div>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+class ItemOfTable < ApplicationRecord
+end

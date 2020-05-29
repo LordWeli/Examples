@@ -1,0 +1,29 @@
+<div class="box-body">
+  <div class="row">
+    <div class="col-md-5">
+    </div>
+    <div class="col-md-4">
+      <table>
+        <thead>
+          <tr>
+            <th>Name
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @items.each do |item| %>
+          <tr>
+            <td> <%= item.name %> </td>
+          </tr>
+        <% end %>
+          
+        </tbody>
+      </table>
+      
+      <%= paginate @items %>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>
+
