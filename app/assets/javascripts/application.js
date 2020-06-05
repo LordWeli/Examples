@@ -19,4 +19,5 @@
 //= require select2/select2.min.js
 //= require bootstrap/bootstrap.min.js
 //= require popper/popper.min.js
-//= require others/text_change_colors.js
+//= require shared/text_change_colors.js
+//= require shared/link-disabled.js
