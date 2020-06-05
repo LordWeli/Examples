@@ -1,15 +1,9 @@
 <div class="box-body">
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-2">
     </div>
     <div class="col-md-6">
-      <%#= select_tag :item_of_table, options_for_select([]), 
-        {include_blank: true, class: "form-control", id: "item_of_table"} %>
-      <%#= text_field_tag 'name', '', class: "form-control", include_blank: true, id: "item_of_tablea", onchange: 'abc(value)' %>
-
       <%= select_tag :name, options_for_select([]), class: "form-control", include_blank: true, id: "item_of_table", onchange: 'abc(value)' %>
-    </div>
-    <div class="col-md-3">
     </div>
   </div>
 </div>
