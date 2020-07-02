@@ -1,0 +1,24 @@
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="last_person">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<script>
+  function lastPerson(){
+    $.get('/people?last=true',function(data){
+      console.log(data);
+    });
+  }
+</script>

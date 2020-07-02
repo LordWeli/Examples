@@ -1,5 +1,16 @@
 class PeopleController < ApplicationController
   before_action :set_person, only: %i[edit update]
+  def index
+    @people = Person.all
+    
+    if params[:last]
+      respond_to do |format|
+        #format.html
+        format.json { render json: { people: @people.last }}
+      end
+    end
+  end
+
   def new
     @person = Person.new
     @last_person = Person.last
@@ -18,6 +29,9 @@ class PeopleController < ApplicationController
   end
 
   def update
+    
+    binding.pry
+    
     if @person.update(person_params)
       if params[:param_save] == 'false'
         redirect_to root_path

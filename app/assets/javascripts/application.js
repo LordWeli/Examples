@@ -18,6 +18,11 @@
 //= require jquery/jquery-3.4.1.min.js
 //= require select2/select2.min.js
 //= require bootstrap/bootstrap.min.js
+//= require popper/popper.js
 //= require popper/popper.min.js
 //= require shared/text_change_colors.js
 //= require shared/link-disabled.js
+//= require editor/wysihtml5.js
+//= require jquery-hotkey/jquery-hotkey.js
+//= require bootstrap-wysiwyg/bootstrap-wysiwyg.min.js
+//= require plugins/tinymce/tinymce.min.js
