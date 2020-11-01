@@ -1,7 +1,11 @@
-# README
+# Code Examples
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
+
+  - [How To Use](#how-to-use)
+  - [Technology](#technology)
+  - [License](#license)
 
 Things you may want to cover:
 
@@ -21,4 +25,4 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+### <a name="license"></a> License

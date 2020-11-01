@@ -1,5 +1,5 @@
 class PeopleController < ApplicationController
-  before_action :set_person, only: %i[edit update]
+  before_action :set_person, only: %i[show edit update destroy]
   def index
     @people = Person.all
     
@@ -11,6 +11,9 @@ class PeopleController < ApplicationController
     end
   end
 
+  def show
+  end
+
   def new
     @person = Person.new
     @last_person = Person.last
@@ -18,8 +21,9 @@ class PeopleController < ApplicationController
 
   def create
     @person = Person.new(person_params)
+    @person.files.attach(params[:person][:files])
     if @person.save
-
+      redirect_to person_path(@person.id)
     else
       render :new
     end
@@ -29,15 +33,20 @@ class PeopleController < ApplicationController
   end
 
   def update
-    
-    binding.pry
-    
     if @person.update(person_params)
       if params[:param_save] == 'false'
         redirect_to root_path
       end
     end
   end
+
+def destroy
+  if @person.files.find(params[:format]).purge
+    redirect_to person_path(@person.id)
+  else
+    redirect_to person_path(@person.id)
+  end
+end
 
   def set_person
     @person = Person.find(params[:id])

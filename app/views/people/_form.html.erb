@@ -12,11 +12,20 @@
         <div class="box-body">
           <%= f.label :name, class: 'control-label' %>
 
-          <%= f.text_field :name, class: 'form-control', required: true, oninput: 'saveForm()'%>
+          <%= f.text_field :name, class: 'form-control', required: true %>
         </div>
-          
+
+        <div class="box-body">
+          <%= f.file_field :files, multiple: true %>
+        </div>
+
         <div class="box-footer">
-          <div id="to_save" class='btn btn-info' onclick='changeSave()'> Salvar </div>
+          <%
+=begin%>
+ <div id="to_save" class='btn btn-info' onclick='changeSave()'> Salvar </div> 
+<%
+=end%>
+        <%= f.submit 'Salvar', class: 'btn btn-info'%>
         </div>
       <% end %>
     </div>
